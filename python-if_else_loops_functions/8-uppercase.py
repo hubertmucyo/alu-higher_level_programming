@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 offset = -32
 
+
 def uppercase(stru):
     i = 0
     while i < len(stru):
@@ -12,6 +13,7 @@ def uppercase(stru):
         print("{}".format(new_str), end='')
         i = i + 1
     print("")
+
 
 def islower(strs):
     value = ord(strs)
