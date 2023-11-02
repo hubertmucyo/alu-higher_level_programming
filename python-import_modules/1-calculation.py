@@ -5,8 +5,8 @@ if __name__ == "__main__":
     from calculator_1 import mul
     from calculator_1 import div
   
-a=10
-b=5
+a = 10
+b = 5
 summ = add(a,b)
 diff = sub(a,b)
 divi = div(a,b)
