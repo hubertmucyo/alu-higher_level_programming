@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from calculator_1 import add 
-    from calculator_1 import sub
-    from calculator_1 import mul
-    from calculator_1 import div
+    import calculator_1.py as obj
   
 a = 10
 b = 5
-summ = add(a,b)
-diff = sub(a,b)
-divi = div(a,b)
-mult = mul(a,b)
+summ = obj.add(a,b)
+diff = obj.sub(a,b)
+divi = obj.div(a,b)
+mult = obj.mul(a,b)
 
 print("{:d} + {:d} = {:d}".format(a,b,summ))
 print("{:d} - {:d} = {:d}".format(a,b,diff))
