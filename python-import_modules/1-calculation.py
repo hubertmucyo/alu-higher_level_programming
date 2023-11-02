@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import calculator_1 as obj
-  
+    import calculator_1 as extra
+
 
 a = 10
 b = 5
-summ = obj.add(a,b)
-diff = obj.sub(a,b)
-mult = obj.mul(a,b)
-divi = obj.div(a,b)
-print("{:d} + {:d} = {:d}".format(a, b, summ))
-print("{:d} - {:d} = {:d}".format(a, b, diff))
-print("{:d} x {:d} = {:d}".format(a, b, mult))
-print("{:d} / {:d} = {:d}".format(a, b, divi))
+num1 = extra.add(a, b)
+num2 = extra.sub(a, b)
+num3 = extra.mul(a, b)
+num4 = extra.div(a, b)
+print("{:d} + {:d} = {:d}".format(a, b, num1))
+print("{:d} - {:d} = {:d}".format(a, b, num2))
+print("{:d} * {:d} = {:d}".format(a, b, num3))
+print("{:d} / {:d} = {:d}".format(a, b, num4))
