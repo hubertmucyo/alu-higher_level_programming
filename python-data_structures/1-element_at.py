@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#print elements at index
+# print elements at index
 def element_at(my_list, idx):
     if idx < 0:
         return "None"
