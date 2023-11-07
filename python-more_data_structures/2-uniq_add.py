@@ -11,4 +11,3 @@ def uniq_add(my_list=[]):
     for temp in temp_list:
         sum_us += temp
     return sum_us
-
