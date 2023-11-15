@@ -66,7 +66,7 @@ class Rectangle:
     def __str__(self):
         counter = 0
         output = ""
-        if self.__width== 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
         else:
             while counter < self.__height:
