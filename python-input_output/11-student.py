@@ -24,7 +24,7 @@ class Student:
         """Returns a dictionary representation of a Student instance.
 
         Args:
-            attrs (list): A list of attribute names to include in the dictionary.
+            attrs(list):A list of attribute names to include in the dictionary.
 
         Returns:
             dict: A dictionary representing the Student instance.
