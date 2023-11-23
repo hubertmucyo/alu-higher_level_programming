@@ -6,7 +6,7 @@ A module that defines a Student class.
 
 
 class Student:
- """ 
+    """ 
     Represents a student.
     Attributes:
         first_name (str): The first name of the student.
