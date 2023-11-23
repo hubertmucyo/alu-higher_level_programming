@@ -8,7 +8,6 @@ A module that defines a Student class.
 class Student:
     """ 
     Represents a student.
-
     Attributes:
         first_name (str): The first name of the student.
         last_name (str): The last name of the student.
@@ -34,7 +33,6 @@ class Student:
 
         Args:
             attrs (list): A list of attribute names to include in the dictionary.
-
         Returns:
             dict: A dictionary representing the Student instance.
         """
