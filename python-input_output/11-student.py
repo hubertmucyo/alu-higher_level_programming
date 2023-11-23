@@ -37,7 +37,7 @@ class Student:
             dict: A dictionary representing the Student instance.
         """
         if attrs is not None and all(isinstance(attr, str) for attr in attrs):
-         return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
         return self.__dict__
 
     def reload_from_json(self, json):
