@@ -1,16 +1,12 @@
 #!/usr/bin/python3
-"""
-Module: student
-A module that defines a Student class.
-"""
+"""Defines a class Student."""
 
 
 class Student:
-    """Represents a student."""
+    """Represent a student."""
 
     def __init__(self, first_name, last_name, age):
-        """Initializes a new Student instance.
-
+        """Initialize a new Student.
         Args:
             first_name (str): The first name of the student.
             last_name (str): The last name of the student.
@@ -21,23 +17,21 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Returns a dictionary representation of a Student instance.
-
+        """Get a dictionary representation of the Student.
+        If attrs is a list of strings, represents only those attributes
+        included in the list.
         Args:
-            attrs(list):A list of attribute names to include in the dictionary.
-
-        Returns:
-            dict: A dictionary representing the Student instance.
+            attrs (list): (Optional) The attributes to represent.
         """
-        if attrs is not None and all(isinstance(attr, str) for attr in attrs):
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+        if (type(attrs) == list and
+                all(type(ele) == str for ele in attrs)):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
 
     def reload_from_json(self, json):
-        """Replaces all attributes of the Student instance with values from dictionary.
-
+        """Replace all attributes of the Student.
         Args:
-            json (dict): A dictionary with attribute-value pairs.
+            json (dict): The key/value pairs to replace attributes with.
         """
-        for key, value in json.items():
-            setattr(self, key, value)
+        for k, v in json.items():
+            setattr(self, k, v)
