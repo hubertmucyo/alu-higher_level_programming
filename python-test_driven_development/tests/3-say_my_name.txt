@@ -1,0 +1,28 @@
+import the python module:
+	>>> say_name = __import__("3-say_my_name").say_my_name
+	
+Testing for both strings:
+	>>> say_name("nic", "nic")
+	My name is nic nic
+
+Testing for int and string:
+	>>> say_name(1, "nic")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+Testing for string and int:
+	>>> say_name("nic", 1)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+Testing for one string input:
+	>>> say_name("nic")
+	My name is nic 
+
+Testing for missing both arguments:
+	>>> say_name()
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
