@@ -1,0 +1,54 @@
+importing module for whatever:
+	>>> indent = __import__("5-text_indentation").text_indentation
+
+testing for . in lines:
+	>>> indent("show. now. now.")
+	show.
+	<BLANKLINE>
+	now.
+	<BLANKLINE>
+	now.
+	<BLANKLINE>
+
+testing for : in lines:
+	>>> indent("show: now: now:")
+	show:
+	<BLANKLINE>
+	now:
+	<BLANKLINE>
+	now:
+	<BLANKLINE>
+
+test for ? in lines:
+	>>> indent("show? now? now?")
+	show?
+	<BLANKLINE>
+	now?
+	<BLANKLINE>
+	now?
+	<BLANKLINE>
+
+test for both ? . : in lines:
+	>>> indent("For life? now: is not the time.")
+	For life?
+	<BLANKLINE>
+	now:
+	<BLANKLINE>
+	is not the time.
+	<BLANKLINE>
+
+testnig for wrong type:
+	>>> indent(5)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+testing strign with blank lines:
+	>>> indent("food is good")
+	food is good
+
+testing missing argument:
+	>>> indent()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
